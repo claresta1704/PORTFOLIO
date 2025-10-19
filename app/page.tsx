@@ -131,7 +131,7 @@ export default function Home() {
           <p className="text-lg max-w-xl">
             Thank you for visiting my portfolio
           </p>
-          <a href="#projects" className="px-6 py-3 bg-black text-white rounded-full hover:bg-white hover:text-black transition-all">
+          <a href="/CV_ClarestaElysia.pdf" download="CV_ClarestaElysia.pdf" className="px-6 py-3 bg-black text-white rounded-full hover:bg-white hover:text-black transition-all">
             Download CV
           </a>
         </div>
