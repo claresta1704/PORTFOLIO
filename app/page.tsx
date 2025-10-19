@@ -38,6 +38,15 @@ export default function Home() {
   return (
     <>
     <div className="fixed top-4 left-0 right-0 z-50 flex flex-row items-center px-8">
+      <div className="flex pr-6">
+        <Image
+          className="object-cover"
+          src="/logo.png"
+          alt="logo"
+          height={120}
+          width={120}
+        />
+      </div>
       <div className="flex flex-grow flex-col gap-1">
         <div className="flex h-[6px] bg-white"></div>
         <div className="flex h-[2px] bg-white"></div>

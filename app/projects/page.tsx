@@ -5,8 +5,16 @@ import Link from "next/link";
 export default function ProjectsPage() {
   return (
     <>
-    <div className="fixed top-4 right-0 z-50 px-8">
-      <Link href="/">
+      <div className="fixed top-4 left-0 z-100 px-8">
+        <Image
+          className="object-cover"
+          src="/logo.png"
+          alt="logo"
+          height={120}
+          width={120}
+        />
+      </div>
+      <Link href="/" className="fixed top-4 right-0 z-100 px-8">
         <Image
           className="dark:invert cursor-pointer"
           src="/arrow-back.png"
@@ -15,7 +23,6 @@ export default function ProjectsPage() {
           height={60}
         />
       </Link>
-    </div>
 
     <main className="min-h-screen max-w-screen bg-[rgb(18,50,20)] text-white flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-8">
       <div className="relative z-10 flex flex-col px-10 gap-10">
