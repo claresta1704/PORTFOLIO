@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --background: #360c0c;
@@ -26,8 +25,8 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.playfair {
-  font-family: "Playfair Diplay", serif;
+.oswald {
+  font-family: var(--font-oswald), serif;
 }
 
 @keyframes scroll {
@@ -65,4 +64,17 @@ body {
   background-position: center;
   transition: background-image 1s ease-in-out;
   filter: brightness(40%);
+}
+
+@keyframes glowing {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.glow-button {
+  animation: glowing 2s infinite ease-in-out;
 }

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -62,14 +63,14 @@ export default function Home() {
         </a>
         <a href="https://www.linkedin.com/in/claresta-elysia-755852332/" target="_blank" rel="noopener noreferrer">
           <Image
-            className="object-cover rounded-full dark:invert"
+            className="object-cover dark:invert"
             src="/logo-linkedin.png"
             alt="linkedin"
             width={60}
             height={60}
           />
         </a>
-        <a onClick={handleCopyEmail} className="cursor-pointer hover:scale-110 transition-transform">
+        <a onClick={handleCopyEmail} className="cursor-pointer">
           <Image
             className="object-cover dark:invert"
             src="/logo-email.png"
@@ -81,10 +82,16 @@ export default function Home() {
       </div>
     </div>
 
+    <div className="fixed bottom-4 right-4 z-50 pr-8 pb-8">
+      <Link href="/projects" className="px-6 py-3 bg-white text-black rounded-full hover:bg-white hover:text-black transition-all glow-button">
+            MY PROJECTS
+      </Link>
+    </div>
+
     {showCopied && (
       <div className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white px-6 py-3 rounded-lg z-[60] transition-all duration-500 ease-in-out 
-        ${showCopied ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
-        Alamat email telah disalin ke clipboard!
+        ${showCopied ? "opacity-100" : "opacity-0"}`}>
+        Email address copied to clipboard!
       </div>
     )}
     
@@ -189,10 +196,10 @@ export default function Home() {
       <section id="projects" className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0 w-full h-full animate-slideShow bg-cover bg-center z-0"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className="playfair text-8xl font-extrabold text-white">PROJECTS</h1>
-          <a href="#projects" className="px-6 py-3 bg-black text-white rounded-full hover:bg-white hover:text-black transition-all">
+          <h1 className="font-serif text-9xl font-extrabold text-white">PROJECTS</h1>
+          <Link href="/projects" className="px-6 py-3 bg-black text-white rounded-full hover:bg-white hover:text-black transition-all">
             See More
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -231,7 +238,7 @@ export default function Home() {
 
       <footer className="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4 text-center">
         <aside>
-          <p>Copyright © {new Date().getFullYear()} Claresta Elysia - All right reserved</p>
+          <p>Copyright © {new Date().getFullYear()} Claresta Elysia - All right reserved.</p>
         </aside>
       </footer>
     </>
