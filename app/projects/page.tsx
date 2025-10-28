@@ -122,6 +122,38 @@ export default function ProjectsPage() {
       </div>
     </section>
 
+    <section className="min-h-screen max-w-screen bg-[rgb(83,18,32)] text-white flex flex-col items-center justify-center lg:justify-end lg:flex-row gap-8">
+      <div className="relative z-10 flex flex-col px-10 gap-10 items-end text-end">
+        <div className="flex flex-row items-center gap-10">
+          <h1 className="oswald font-extrabold text-8xl">PROJECT 04</h1>
+            <div className="group px-4 py-2 flex flex-row items-center gap-2 bg-white text-xl text-black rounded-full hover:bg-black hover:text-white transition-all">
+              <Image
+                className="object-cover w-full h-full group-hover:invert"
+                src="/logo-github.png"
+                alt="github"
+                width={20}
+                height={20}
+              />
+              <Link href="https://github.com/claresta1704/Clixia-OnlinePhotobooth">
+                Github
+              </Link>
+            </div>
+        </div>
+        <p className="text-xl w-full lg:w-1/2">
+          Clixia is a web-based photobooth application i built with Next.js and React, allowing users to capture and download photos just like a regular photobooth but anytime and anywhere. It lets users take pictures, apply custom frames, and add stickers to creatively personalize their shots. Clixia is integrated with Firebase for secure authentication, cloud storage, and real-time database connectivity, and deployed on Vercel. During the development of this project, I enhanced my skills in front-end development, interactivity design, and cloud integration, gaining deeper insight into how to combine creativity with technical precision in modern web applications.
+        </p>
+      </div>
+      <div className="absolute w-2/3 h-[100vh] flex left-0 items-left justify-left bg-black">
+        <Image
+          className="object-cover w-full h-full brightness-40"
+          src="/clixia.png"
+          alt="clixiae"
+          width={100}
+          height={100}
+        />
+      </div>
+    </section>
+
     <footer className="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4 text-center">
       <aside>
         <p>Copyright © {new Date().getFullYear()} Claresta Elysia - All right reserved.</p>
